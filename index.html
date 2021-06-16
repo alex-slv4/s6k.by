@@ -1,35 +1,25 @@
-<style type="text/css">
-	body {
-		margin: 0;
-		background-color: #282923
-	}
-	canvas {
-      	position: absolute;
-  		top: 50%;
-  		left: 50%;
-  		transform: translate(-50%, -50%);
-    }
-</style>
-<body>
-	<canvas width="350" height="400" id="canvas"></canvas>
-	<div id="main">
-		<script>
-		var c = document.getElementById("canvas")
-		var ctx = c.getContext("2d", {alpha: false});
-		var idata = ctx.createImageData(c.width, c.height);
-		var buffer32 = new Uint32Array(idata.data.buffer);
-
-		(function loop() {
-			noise(ctx);
-			requestAnimationFrame(loop)
-		})()
-
-		function noise(ctx) {
-			var len = buffer32.length - 1;
-			while(len--) buffer32[len] = Math.random() < 0.5 ? 0 : -1>>0;
-			ctx.putImageData(idata, 0, 0);
+<head>
+	<title>Games on WEB, ask me how</title>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<meta name="facebook-domain-verification" content="njeueczldvgy5uoke4v8nw7w3jyy68" />
+	<style type="text/css">
+		body {
+			margin: 0;
+			background-color: #efefef !important;
 		}
-		
-		</script>
+		.main {
+			display: flex;
+			height: 100%;
+		}
+		.main > * {
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="alexander-slavschik-44555814"><a class="LI-simple-link" href='https://by.linkedin.com/in/alexander-slavschik-44555814?trk=profile-badge'>Alexander Slavschik</a></div>
 	</div>
 </body>
